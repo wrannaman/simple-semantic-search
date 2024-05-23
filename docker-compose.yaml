@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   weaviate:
     command:
@@ -21,3 +23,20 @@ services:
       DEFAULT_VECTORIZER_MODULE: 'none'
       ENABLE_MODULES: 'text2vec-cohere,text2vec-huggingface,text2vec-palm,text2vec-openai,generative-openai,generative-cohere,generative-palm,ref2vec-centroid,reranker-cohere,qna-openai'
       CLUSTER_HOSTNAME: 'node1'
+  
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+    - "3001:3001"
+    restart: always
+    environment:
+      PORT: 3001
+      WEAVIATE_SCHEME: http
+      WEAVIATE_HOST: weaviate
+      WEAVIATE_PORT: 8080
+      OPENAI_API_KEY: sk-your-api-key
+      DEFAULT_VECTORIZER_MODULE: 'text2vec-openai'
+    depends_on:
+      - weaviate

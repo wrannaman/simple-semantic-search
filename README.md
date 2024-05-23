@@ -39,7 +39,7 @@ cd semantic-search-api
 cp .env.example .env
 ```
 
-Edit the `.env` file to set your configuration:
+Edit the `.env` file to set your configuration. Make sure to replace the open ai API key!
 
 ```dotenv
 PORT=3001
