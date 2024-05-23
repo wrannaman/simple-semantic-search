@@ -24,20 +24,41 @@ Semantic Search API is an open-source solution that allows you to integrate powe
 
 ### Installation
 
+### Installation
+
 1. **Clone the Repository**:
 
-    ```bash
-    git clone https://github.com/wrannaman/simple-semantic-search.git
-    cd semantic-search-api
-    ```
+```bash
+git clone https://github.com/your-repo/semantic-search-api.git
+cd semantic-search-api
+```
 
-2. **Start the API**:
+2. **Copy Environment Variables**:
 
-    ```bash
-    docker-compose up
-    ```
+```bash
+cp .env.example .env
+```
 
-    That's it! Your semantic search API is now running.
+Edit the `.env` file to set your configuration:
+
+```dotenv
+PORT=3001
+WEAVIATE_SCHEME=http
+WEAVIATE_HOST=0.0.0.0
+WEAVIATE_PORT=8080
+OPENAI_API_KEY=sk-your-api-key
+DEFAULT_VECTORIZER_MODULE='text2vec-openai'
+```
+
+3. **Start the API**:
+
+```bash
+docker-compose up
+```
+
+That's it! Your semantic search API is now running.
+
+### Usage
 
 ### Usage
 
