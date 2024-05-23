@@ -53,7 +53,7 @@ DEFAULT_VECTORIZER_MODULE='text2vec-openai'
 3. **Start the API**:
 
 ```bash
-docker-compose up
+docker-compose up --build
 ```
 
 That's it! Your semantic search API is now running.
