@@ -27,7 +27,7 @@ Semantic Search API is an open-source solution that allows you to integrate powe
 1. **Clone the Repository**:
 
     ```bash
-    git clone https://github.com/your-repo/semantic-search-api.git
+    git clone https://github.com/wrannaman/simple-semantic-search.git
     cd semantic-search-api
     ```
 
